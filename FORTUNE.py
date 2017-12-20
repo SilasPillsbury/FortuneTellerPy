@@ -131,12 +131,14 @@ def fort():
          "painter",
          "middle school gym teacher"
          ]
-    random.seed(hash(input("Please input your name \n")))
-    q = s[random.randint(0,len(s)-1)]
-    w = v[random.randint(0,len(v)-1)]
-    e = a[random.randint(0,len(a)-1)]
-    r = n[random.randint(0,len(n)-1)]
-
-    print(q,w,e,r+'.')
+    name = input(" \n Please input your name for fortune or type quit to quit \n")
+    while name != 'quit':
+        random.seed(hash(name))
+        q = s[random.randint(0,len(s)-1)]
+        w = v[random.randint(0,len(v)-1)]
+        e = a[random.randint(0,len(a)-1)]
+        r = n[random.randint(0,len(n)-1)]
+        print("--"+q,w,e,r+'.'+'-- \n')
+        name = input("Another? \n")
 
 fort()
